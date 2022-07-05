@@ -64,7 +64,7 @@
 
 - name: Read Windows Firewall status from domain configuration file
   set_fact:
-    windows_firewall_state: "{{ (domain.enable_windows_firewall is defined and domain.enable_windows_firewall is true) | ternary('enabled', 'disabled') }}"
+    windows_firewall_state: "{{ (domain.enable_windows_firewall) | ternary('enabled', 'disabled') }}"
 
 - name: "Ensure Windows firewall is {{ windows_firewall_state }}"
   win_firewall:
