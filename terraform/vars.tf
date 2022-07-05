@@ -26,7 +26,7 @@ variable "ssh_key" {
 
 variable "region" {
   description = "Azure region in which resources should be created. See https://azure.microsoft.com/en-us/global-infrastructure/locations/"
-  default     = "West Europe"
+  default     = "Australia East"
 }
 
 variable "resource_group" {
