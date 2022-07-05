@@ -1,6 +1,6 @@
 <Subscription xmlns="http://schemas.microsoft.com/2006/03/windows/events/subscription">
     <SubscriptionId>{{ wef_subscription_name }}</SubscriptionId>
-{% if subscription_being_created is defined and subscription_being_created is true %}
+{% if subscription_being_created %}
     <!-- This attribute should be included only when the subscription is created (not updated) -->
     <SubscriptionType>SourceInitiated</SubscriptionType>
 {% endif %}
